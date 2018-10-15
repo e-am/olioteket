@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Beer extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Beer extends Migration
      */
     public function up()
     {
-      Schema::create('beers', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name');
           $table->mediumText('body');
@@ -21,7 +21,7 @@ class Beer extends Migration
           $table->integer('user_id');
           $table->rememberToken();
           $table->timestamps();
-      });
+        });
     }
 
     /**
@@ -31,6 +31,6 @@ class Beer extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts');
     }
 }
