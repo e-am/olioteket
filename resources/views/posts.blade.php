@@ -3,7 +3,7 @@
 @section('content')
 
 <nav class="main-nav">
-    <a href="{{ url('/posts') }}"><h3>Öl</h3></a>
+    <a href="{{ url('/home') }}"><h3>Hem</h3></a>
 </nav>
 <div class="container">
 
@@ -19,12 +19,8 @@
                         </div>
                     @endif
 
-                    <div class="welcome">   
-                        <h1>ÖLIOTEKET</h1>
-                        <section class="welcome text">
-                        <h2>Välkommen till Ölioteket!</br>Öl-forumet som ingen behöver<h2>
-                        <section>
-                    </div>
+                    <small>posts will go here.. WIP!</small>
+                
                 </div>
             </div>
         </div>

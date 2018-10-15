@@ -83,11 +83,6 @@
                 <div class="title m-b-md">
                     Ölioteket
                 </div>
-
-                <div class="posts">
-                    <h2>Posts</h2>
-                    
-                </div>
             </div>
         </div>
     </body>
