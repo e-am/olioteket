@@ -27,16 +27,9 @@
                         </div>  
 
                        <div id="post-name">
-                          <h3>{{ $post->name }}</h3>
+                          <a href="{{ url('/posts') }}/{{$post->id}}"><h3>{{ $post->name }}</h3></a>
                         </div>
 
-                    <div id="post-body">
-                          <small>{{ $post->body }}</small>
-                        </div>
-
-                    <div id="post-date">
-                          <small>{{ $post->created_at }}</small>
-                        </div>
                       
                         </hr>
                        @endforeach

@@ -1,0 +1,42 @@
+body{
+    background-color: white;
+}
+
+.single-post-container{
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #E6E6FA; 
+}
+
+.single-post-desc{
+    width: 40%;
+    height: auto;
+    float: right;
+    margin-top: 60px;
+    margin-right: 60px;
+    text-align: center;
+    background-color: aqua;
+}
+
+#single-title h3{ 
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#single-body{
+    margin-top: 10px; 
+}
+
+.single-img-container{
+    width: 40%;
+    height: auto;
+    float: left;
+    margin-top: 60px;
+    margin-left: 30px; 
+
+}
+
+#single-img{
+    max-width: 100%;
+}
