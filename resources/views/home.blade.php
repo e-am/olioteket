@@ -23,6 +23,10 @@
                         <h1>ÖLIOTEKET</h1>
                         <section class="welcome text">
                         <h2>Välkommen till Ölioteket!</br>Öl-forumet som ingen behöver<h2>
+                        <div>
+
+                            <a href="posts/create"><input type="submit" value="Create Beer Review"></a>
+                        </div>
                         <section>
                     </div>
                 </div>

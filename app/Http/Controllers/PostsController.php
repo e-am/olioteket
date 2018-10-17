@@ -25,7 +25,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -36,7 +36,23 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'brand' => 'required',
+            'image' => 'required',
+            'rating' => 'required',
+            'body' => 'required',
+
+        ]);
+        
+        // Crate post
+        $post = new Post;
+        $post->name = $request->input('name');
+        $post->brand = $request->input('brand');
+        $post->image = $request->input('image');
+        $post->rating = $request->input('rating');
+        $post->body = $request->input('body');
+        $post->save();
     }
 
     /**
