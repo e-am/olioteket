@@ -45,6 +45,14 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+        ],
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -69,6 +77,13 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+  //pratar med databasen
+        'admins' => [
+            'users' => [
+                'driver' => 'eloquent',
+                'model' => App\Admin::class,
+            ],
+
 
         // 'users' => [
         //     'driver' => 'database',
@@ -97,6 +112,13 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
-    ],
+//använder samma tabell för admins som users
 
+     'admins' => [
+                'provider' => 'admins',
+                'table' => 'password_resets',
+                'expire' => 60,
+            ],
+    ],
+]
 ];

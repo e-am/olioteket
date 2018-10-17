@@ -24,3 +24,6 @@ Route::resource('/posts', 'PostsController');
 Route::get('/posts', function(){
   return view('pages.posts');
 });
+
+
+Route::get('/admin', 'AdminController@index');
