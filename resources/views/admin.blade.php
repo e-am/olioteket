@@ -13,17 +13,19 @@
 
                 <div class="card-body">
 
-                    @if (session('status'))
+                  <!--  @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
+                  -->
                     <div class="panel-heading">ADMIN Dashboard
                       <div class="panel-body">
                         <h1>Du är inloggad som Admin</h1>
 
                       </div>
                     </div>
+
 
                     <div class="welcome">
                         <h1>ÖLIOTEKET</h1>
