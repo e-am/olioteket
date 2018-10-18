@@ -27,6 +27,9 @@
                 <a class="navbar-brand" href="{{ url('/posts') }}">
                     {{ config('app.name', 'Öliotetket') }}
                 </a>
+                @can('admin-only')
+                    <a class="navbar-brand" href="{{ url('/private') }}">Admin-Panel</a>
+                @endcan
             @else
             <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Öliotetket') }}
