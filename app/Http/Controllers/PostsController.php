@@ -36,24 +36,17 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'brand' => 'required',
-            'image' => 'required',
-            'rating' => 'required',
-            'body' => 'required',
-
+        Post::create([
+            'name' => request('name'),
+            'brand' => request('brand'),
+            'rating' => request('rating'),
+            'img' => request('img'),
+            'body' => request('body')
         ]);
+
         
-        // Crate post
-        $post = new Post;
-        $post->name = $request->input('name');
-        $post->brand = $request->input('brand');
-        $post->image = $request->input('image');
-        $post->rating = $request->input('rating');
-        $post->body = $request->input('body');
-        $post['user_id'] = auth()->user()->id;
-        $post->save();
+
+        return redirect('/posts');
     }
 
     /**

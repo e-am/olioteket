@@ -6,9 +6,11 @@
     
     {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
 
+    {{ csrf_field() }}
+
             <div class="form-group">
-                {!! Form::label('beerName', 'Beer name') !!}
-                {!! Form::text('beerName', null, ['class' => 'form-control']) !!}
+                {!! Form::label('name', 'Beer name') !!}
+                {!! Form::text('name', null, ['class' => 'form-control']) !!}
             </div>
  
             <div class="form-group">
@@ -17,8 +19,8 @@
             </div>
  
             <div class="form-group">
-                {!! Form::label('image', 'Image') !!}
-                {!! Form::text('image', null, ['class' => 'form-controll']) !!}
+                {!! Form::label('img', 'Image') !!}
+                {!! Form::text('img', null, ['class' => 'form-controll']) !!}
             </div>
 
             <div class="form-group">

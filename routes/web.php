@@ -18,8 +18,20 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/post/create', 'PostsController@create');
 
 
 
+//Posts
+
+Route::get('/posts/create', 'PostsController@create');
+Route::post('/posts', 'PostsController@store');
+/*
+GET /posts
+GET /posts/create
+POST /posts
+GET /posts/{id}/edit
+PATCH /posts/{id}
+DELETE /posts/{id}
+
+*/
 Route::resource('posts', 'PostsController');
