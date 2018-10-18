@@ -44,7 +44,6 @@ class PostsController extends Controller
             'body' => request('body')
         ]);
 
-        
 
         return redirect('/posts');
     }

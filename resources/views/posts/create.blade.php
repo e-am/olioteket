@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="col-sm-8 blog-main">
     <h2>Create A Beer Review</h2>
     
