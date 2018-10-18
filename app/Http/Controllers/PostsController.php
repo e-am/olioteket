@@ -49,7 +49,8 @@ class PostsController extends Controller
             'brand' => request('brand'),
             'rating' => request('rating'),
             'img' => request('img'),
-            'body' => request('body')
+            'body' => request('body'),
+            'user_id' => Auth()->id()
         ]);
 
 
