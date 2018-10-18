@@ -35,3 +35,5 @@ DELETE /posts/{id}
 
 */
 Route::resource('posts', 'PostsController');
+
+Route::post('/posts/{post}/comments', 'CommentsController@store');
