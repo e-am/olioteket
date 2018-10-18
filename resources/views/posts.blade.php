@@ -30,7 +30,7 @@
                           <a href="{{ url('/posts') }}/{{$post->id}}"><h3>{{ $post->name }}</h3></a>
                         </div>
                         @if (Auth::check())
-                          {{  }}
+                          @include('posts.comments')
                         @else
                           <p>Du måste logga in för att kommentera!</p>
                         @endif

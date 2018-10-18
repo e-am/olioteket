@@ -52,6 +52,7 @@ class PostsController extends Controller
         $post->image = $request->input('image');
         $post->rating = $request->input('rating');
         $post->body = $request->input('body');
+        $post['user_id'] = auth()->user()->id;
         $post->save();
     }
 

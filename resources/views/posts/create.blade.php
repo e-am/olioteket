@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="col-sm-8 blog-main">
     <h2>Create A Beer Review</h2>
     
     {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
@@ -30,7 +30,7 @@
               {!! Form::label('body', 'Body') !!}
               {!! Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Add review']) !!}
             </div>
-            {!! Form::submit('Add this Beer Review', ['class' => 'btn btn-info']) !!}
+            {!! Form::submit('Add this Beer Review', ['class' => 'btn btn-primary']) !!}
 
             {!! Form::close() !!}
     </div>
