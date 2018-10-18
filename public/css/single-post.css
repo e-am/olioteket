@@ -35,9 +35,10 @@ a{
 .single-post-desc{
     width: 50%;
     height: auto;
-    float: left;
+    float: right;
     margin-top: 60px;
     text-align: center;
+    overflow: initial;
     
 }
 
@@ -59,17 +60,12 @@ a{
 }
 
 .single-img-container{
-    width: 40%;
+    width: auto;
     height: auto;
     float: left;
-<<<<<<< HEAD
-    margin-left: 30px;
-    margin-top: 30px; 
-=======
-    margin-top: 60px;
+    margin-top: 30px;
     margin-left: 30px; 
     border: 2px solid rgb(212, 212, 250);
->>>>>>> 59646c3772780a8271f004e36a2a2a9eed7e7e64
 }
 
 img{
@@ -103,12 +99,4 @@ textarea{
     margin-top: 10px; 
     background-color: lavender;
     border-radius: 5px;
-}
-
-.comment-body{
-    font-size: 1px;
-}
-
-.comment-date{
-    font-size: 14px;
 }

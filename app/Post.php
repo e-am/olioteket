@@ -12,12 +12,8 @@ class Post extends Model
     public function comments()
 
         {
-<<<<<<< HEAD
-            return $this->hasMany(Comments::class);
-=======
             
             return $this->hasMany('App\Comment');
->>>>>>> 59646c3772780a8271f004e36a2a2a9eed7e7e64
         }
       
 }
