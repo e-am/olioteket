@@ -38,5 +38,12 @@ Route::resource('posts', 'PostsController');
 
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 
+<<<<<<< HEAD
 //Admin
 Route::get('/private', 'HomeController@private')->name('private');
+=======
+	
+Route::get('/posts/{id}', 'PostsController@show')->name('show-posts');
+
+Route::resource('comments', 'CommentsController');
+>>>>>>> 59646c3772780a8271f004e36a2a2a9eed7e7e64

@@ -1,19 +1,29 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-
-use App\Post;
+ 
 use App\Comment;
-
-
+use App\Post;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use App\Http\Requests\CommentRequest;
+ 
 class CommentsController extends Controller
 {
-    public function store(Post $post)
+    public function __construct() {
+        $this->middleware('auth');
+    }
+ 
+ 
+    public function store(CommentRequest $request)
     {
-        $post->addcomment(request('body'));
-
-        return back();
+        $post = Post::findOrFail($request->post_id);
+ 
+        Comment::create([
+            'body' => $request->body,
+            'user_id' => Auth::id(),
+            'post_id' => $post->id
+        ]);
+        return redirect()->route('show-posts', $post->id);
     }
 }
