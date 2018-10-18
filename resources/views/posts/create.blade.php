@@ -2,7 +2,8 @@
 
 @section('content')
 
-<div class="col-sm-8 blog-main">
+@include ('layouts.errors')
+<div class="container">
     <h2>Create A Beer Review</h2>
     
     {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
@@ -36,5 +37,6 @@
             {!! Form::submit('Add this Beer Review', ['class' => 'btn btn-primary']) !!}
 
             {!! Form::close() !!}
+            
     </div>
 @endsection
