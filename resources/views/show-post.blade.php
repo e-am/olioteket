@@ -1,4 +1,5 @@
 
+
 <link rel="stylesheet" type="text/css" href="{{ asset('css/single-post.css') }}" >
 
 <nav class="main-nav">
@@ -28,29 +29,29 @@
 
                            
                         </div>
-
                     <div class="comments">
-                        @foreach ($post->comments as $comment)
+                        <h3>Comments</h3>
 
-                        <section class="comment-box"> 
+                            @if (Auth::check())
+                           
+
+                {{ Form::open(['route' => ['comments.store'], 'method' => 'POST']) }}
+                        <div class="add-comment">
+                        <p>{{ Form::textarea('body', old('body')) }}</p>
+                            {{ Form::hidden('post_id', $post->id) }}
+                        <p>{{ Form::submit('Send') }}</p>
+                            {{ Form::close() }}
+                            @endif
+                        </div>
+                            <div class="comment-box">
+                            @forelse ($post->comments as $comment)
+                        <p>{{ $comment->user->name }} {{$comment->created_at}}</p>
+                        <p>{{ $comment->body }}</p>
                         <hr>
-                            
-                           <h3>{{ $comment->body }}</h3>
-                           <small>{{$comment->created_at}}</small>
-
-                        </section>
-
                         
-                        @endforeach
+                        @empty
+                         <p>This post has no comments</p>
+                        @endforelse
 
-                        <form method="POST" action="{{url('/posts')}}/{{$post->id}}/comments">
-                        {{ csrf_field() }}
-
-                        <div class="form-group">
-                            <textarea name="body" class="form-control"></textarea>
                         </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Comment</button>
-                        </div>
-                    </div>
+</div>

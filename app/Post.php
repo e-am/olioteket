@@ -13,10 +13,7 @@ class Post extends Model
 
         {
             
-            return $this->hasMany(Comments::class);
+            return $this->hasMany('App\Comment');
         }
-    public function addComment($body) 
-    {
-        $this->comments()->create(compact('body'));
-    }    
+      
 }
