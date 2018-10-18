@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
             @if (Auth::check())
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-brand" href="{{ url('/posts') }}">
                     {{ config('app.name', 'Öliotetket') }}
                 </a>
             @else
@@ -45,6 +45,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                       
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -79,7 +80,7 @@
         </nav>
 
         <main class="py-4">
-            @include('error/messages')
+          
             @yield('content')
         </main>
     </div>

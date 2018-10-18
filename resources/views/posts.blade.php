@@ -1,10 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-<nav class="main-nav">
-    <a href="{{ url('/home') }}"><h3>Hem</h3></a>
-</nav>
 <div class="container">
 
     <div class="row justify-content-center">
