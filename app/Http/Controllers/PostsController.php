@@ -90,7 +90,8 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $post = Post::all();
+        return view('/private')->with('post', $post);
     }
 
     /**

@@ -6,7 +6,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
         <div class="container">
+        @if(Auth::check())
         <a id="create-button" href="posts/create"><input type="submit" value="Create Beer Review" class="btn btn-primary"></a>
+        @endif
         </div>
         
             <div class="card">

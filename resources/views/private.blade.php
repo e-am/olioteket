@@ -12,7 +12,7 @@
                 <div class="panel-body">
                     Confidential Information
 
-                <div class="card">
+                                <div class="card">
                 
                 <div class="card-body">
                     
@@ -24,7 +24,7 @@
 
                     
                     <div class="posts-container">
-                            {{ $users->all() }}
+                       
                     </div>
 
                 </div>
