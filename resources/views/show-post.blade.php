@@ -35,4 +35,28 @@
                            
                         </div>
 
-    
+                    <div class="comments">
+                        @foreach ($post->comments as $comment)
+
+                        <section class="comment-box"> 
+                        <hr>
+                            
+                           <h3>{{ $comment->body }}</h3>
+                           <small>{{$comment->created_at}}</small>
+
+                        </section>
+
+                        
+                        @endforeach
+
+                        <form method="POST" action="{{url('/posts')}}/{{$post->id}}/comments">
+                        {{ csrf_field() }}
+
+                        <div class="form-group">
+                            <textarea name="body" class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Comment</button>
+                        </div>
+                    </div>
