@@ -26,8 +26,8 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('rating', 'Rating (1-5)') !!}
-                {!! Form::number('rating', '') !!}
+                {!! Form::label('rating', 'Rating') !!}
+                {!! Form::selectRange('rating', 1, 5) !!}
             </div>
 
             <div class="form-group">
