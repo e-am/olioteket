@@ -2,11 +2,32 @@ body{
     background-color: white;
 }
 
-.single-post-container{
-    width: 60%;
-    height: 500px;
+.main-nav{
+    background-color: lavender;
+    width: 80%;
     margin: 0 auto;
-    background-color: #E6E6FA; 
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.main-nav h3{
+    padding-top: 15px;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+.single-post-container{
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: lavender;
+    margin-top: 20px; 
+    border-radius: 5px; 
 }
 
 .single-post-desc{
@@ -16,7 +37,7 @@ body{
     margin-top: 60px;
     margin-right: 60px;
     text-align: center;
-    background-color: aqua;
+    
 }
 
 #single-title h3{ 
@@ -34,9 +55,9 @@ body{
     float: left;
     margin-top: 60px;
     margin-left: 30px; 
-
+    border: 2px solid black;
 }
 
-#single-img{
-    max-width: 100%;
+img{
+    width: 100%;
 }

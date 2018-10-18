@@ -1,9 +1,8 @@
-@extends('layouts.app')
+
 <link rel="stylesheet" type="text/css" href="{{ asset('css/single-post.css') }}" >
-@section('content')
 
 <nav class="main-nav">
-    <a href="{{ url('/home') }}"><h3>Hem</h3></a>
+    <a href="{{ url('/posts') }}"><h3>Back</h3></a>
 </nav>
 
                         <!--displays a single post-->
@@ -30,5 +29,4 @@
                            
                         </div>
 
-                
-@endsection
+    
