@@ -55,26 +55,25 @@ a{
     margin-top: 10px; 
 }
 
+#single-body > p {
+    font-size: 18px;
+}
+
 #user_show {
     font-size: 18px;    
 }
 
 .single-img-container{
     width: auto;
-    height: auto;
+    height: 100%;
     float: left;
-<<<<<<< HEAD
-    margin-top: 60px;
-=======
-    margin-top: 30px;
->>>>>>> 4979b12a37996de4b4c525f74ad74e6c0da19e83
     margin-left: 30px; 
     border: 2px solid rgb(212, 212, 250);
 }
 
 img{
     width: auto;
-    height: 90%;
+    height: 70%;
 }
 
 .comments{

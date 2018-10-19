@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use App\Admin;
 use App\Post;
+use App\User;
+use Illuminate\Http\Request;
 
-class PostsController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,10 @@ class PostsController extends Controller
      */
     public function index()
     {
-       $posts = Post::orderBy('name', 'desc')->get();
-       return view('posts')->with('posts', $posts);
+        $posts = Post::orderBy('name', 'desc')->get();
+        $users = Admin::getAllUsers();
+
+       return view('private')->with('posts', $posts)->with('users', $users);
     }
 
     /**
@@ -25,7 +28,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        //
     }
 
     /**
@@ -36,25 +39,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-
-        $this->validate(request(), [
-            'name' => 'required|min:3',
-            'brand' => 'required|min:3',            
-            'rating' => 'required|between:1,5',
-            'body' => 'required'
-        ]);
-        
-        Post::create([
-            'name' => request('name'),
-            'brand' => request('brand'),
-            'rating' => request('rating'),
-            'img' => request('img'),
-            'body' => request('body'),
-            'user_id' => Auth()->id()
-        ]);
-
-
-        return redirect('/posts');
+        //
     }
 
     /**
@@ -65,9 +50,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);
-        $comments = $post->comments()->with('user')->get();
-        return view('show-post')->with('post', $post);
+        //
     }
 
     /**
@@ -90,8 +73,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $post = Post::find($id);
-        return view('/private')->with('post', $post);
+        //
     }
 
     /**
@@ -102,10 +84,21 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //DELETE
-        $post = Post::findOrFail($id)->first();
+        //DELETE POST
+        $post = Post::findorFail($id);
         $post->delete();
-        return view('/private');
-
+        return Redirect::route('private')-with('message', 'Post deleted!');
     }
+
+    // public function userslist(User $user)
+    // {
+    //    $users = User::all()->get();
+    //    return view('private')->with('users', $users); 
+    // }
+
+
+
 }
+
+
+

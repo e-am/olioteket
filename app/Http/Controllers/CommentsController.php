@@ -18,7 +18,7 @@ class CommentsController extends Controller
     public function store(CommentRequest $request)
     {
         $post = Post::findOrFail($request->post_id);
-        $comment = Comment::orderBy('id', 'desc')->get();
+        
         Comment::create([
             'body' => $request->body,
             'user_id' => Auth::id(),

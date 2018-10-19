@@ -38,12 +38,11 @@ Route::resource('posts', 'PostsController');
 
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 
-<<<<<<< HEAD
 //Admin
 Route::get('/private', 'HomeController@private')->name('private');
-Route::delete('posts, PostsController@delete');
-=======
->>>>>>> 4979b12a37996de4b4c525f74ad74e6c0da19e83
+Route::delete('/private, PostsController@destroy');
+Route::resource('private', 'AdminController');
+ß
 	
 Route::get('/posts/{id}', 'PostsController@show')->name('show-posts');
 
