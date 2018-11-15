@@ -42,8 +42,7 @@ Route::post('/posts/{post}/comments', 'CommentsController@store');
 Route::get('/private', 'HomeController@private')->name('private');
 Route::delete('/private, PostsController@destroy');
 Route::resource('private', 'AdminController');
-ß
-	
+
 Route::get('/posts/{id}', 'PostsController@show')->name('show-posts');
 
 Route::resource('comments', 'CommentsController');
